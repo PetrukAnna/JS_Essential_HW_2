@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Figures </title>
+
+		<script type="text/javascript">
+			
+			document.write("---------------- Rectangle ----------------<br/><br/>")
+
+			for (var i = 0; i < 10; i++) {
+				for (var j = 0; j < 10; j++) {
+					document.write("&nbsp; * &nbsp;");
+				}
+				document.write("<br/>");
+			}
+
+			document.write("<br/><br/>--------- Rectangular triangle ---------<br/><br/>");
+
+			var counter = 0;
+
+			for (var i = 0; i < 10; i++) {
+				counter++;
+				for (var j = 0; j < counter; j++) {
+					document.write("&nbsp; * &nbsp;");
+				}
+				document.write("<br/>");
+			}
+
+			document.write("<br/><br/>--------- Equilateral triangle ---------<br/><br/>");
+
+			var counter = 0;
+			var num = 9;
+			var s = 1;
+
+			for (var i = 0; i < num; i++) {
+				counter++;
+				for (var j = 0; j < num-s; j++) {
+					document.write("&nbsp;&nbsp;&nbsp;");
+				}			
+				for (var k = 0; k < counter; k++) {
+					document.write("* &nbsp;&nbsp;&nbsp;");
+				}
+
+				s++;
+				document.write("<br/>");
+			}
+
+			document.write("<br/><br/>--------------- Diamond ---------------<br/><br/>");
+
+			var counter = 0;
+			var num = 17;
+			var s = 1;
+
+			for (var i = 0; i < num; i++) {
+				if(i+1 < num/2) {
+					s++;
+					counter++;
+				} else {
+					s--;
+					counter--;
+				}
+				for (var j = 0; j < num/2-s; j++) {
+					document.write("&nbsp;&nbsp;&nbsp;");
+				}
+				
+				for (var k = 0; k < counter; k++) {
+					document.write("* &nbsp;&nbsp;&nbsp;");
+				}
+
+				
+				document.write("<br/>");
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
